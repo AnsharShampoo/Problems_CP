@@ -10,6 +10,28 @@ using namespace std;
 #define vif vector<int> v(n);for (int i = 0; i < n; i++) cin >> v[i]
 #define endl '\n'
 int32_t main() {
-    return 0;
-    int 
+    int n,m;
+    cin>>n>>m;
+    multiset<int> tickets;
+    vi ppl(m);
+    for (int i = 0; i<n; i++){
+        int input;
+        cin>> input;
+        tickets.insert(-input);
+    }
+    for (int i = 0; i<m; i++){
+        cin>>ppl[i];
+    }
+
+    // Imp
+    for (int i = 0; i<m; i++){
+        if(tickets.lower_bound(-ppl[i]) != tickets.end()){
+            cout << -*tickets.lower_bound(-ppl[i])<<endl;
+            tickets.erase(tickets.lower_bound(-ppl[i]));
+        }
+        else {
+            cout<< "-1"<<endl;
+        }
+    }
+
 }
