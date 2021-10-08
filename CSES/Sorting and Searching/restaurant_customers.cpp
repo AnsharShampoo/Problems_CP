@@ -22,7 +22,7 @@ int32_t main() {
     int count = 1;
     int max = 0;
     for (int i = 1; i<n; i++){
-        if (hours[i].first <= hours[i-1].second){
+        if (hours[i].first < hours[i-1].second){
             count++;
         }
         else{
