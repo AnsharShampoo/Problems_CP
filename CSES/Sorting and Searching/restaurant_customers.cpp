@@ -21,6 +21,7 @@ int32_t main() {
     sort(hours.begin(), hours.end());
     int count = 1;
     int max = 0;
+    /*
     for (int i = 1; i<n; i++){
         if (hours[i].first < hours[i-1].second){
             count++;
@@ -31,8 +32,23 @@ int32_t main() {
         if (count>max){
             max = count;
         }
+    } */
+    int a = 0, b = 1;
+    while (b<n){
+        if (hours[b].first < hours[a].second){
+                count++;
+            }
+            else{
+                count = 1;
+            }
+            if (count>max){
+                max = count;
+            }
+        if (hours[b].second >= hours[a].second){
+            a++;
+        }
+        b++;
     }
-    cout<<max;
-
+        cout<<max;
 }
 
