@@ -22,8 +22,8 @@ int32_t main() {
     int count = 1;
     int max = 0;
     for (int i = 1; i<n; i++){
-        if (hours[i].second >= hours[i-1].first){
-            count+=1;
+        if (hours[i].first >= hours[i-1].second){
+            count++;
             if (count>max){
                 max = count;
             }
