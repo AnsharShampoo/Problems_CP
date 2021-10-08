@@ -24,12 +24,12 @@ int32_t main() {
     for (int i = 1; i<n; i++){
         if (hours[i].first <= hours[i-1].second){
             count++;
-            if (count>max){
-                max = count;
-            }
         }
         else{
-            count = 0;
+            count = 1;
+        }
+        if (count>max){
+            max = count;
         }
     }
     cout<<max;
