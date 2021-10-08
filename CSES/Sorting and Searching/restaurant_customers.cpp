@@ -20,7 +20,7 @@ int32_t main() {
     }
     sort(hours.begin(), hours.end());
     int count = 0;
-    int max = 0;
+    int max = 1;
     for (int i = 1; i<n; i++){
         if (hours[i].first <= hours[i-1].second){
             count++;
