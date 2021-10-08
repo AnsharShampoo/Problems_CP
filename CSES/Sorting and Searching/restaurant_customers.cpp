@@ -19,8 +19,8 @@ int32_t main() {
      hours.push_back(make_pair(a,b));
     }
     sort(hours.begin(), hours.end());
-    int count = 0;
-    int max = 1;
+    int count = 1;
+    int max = 0;
     for (int i = 1; i<n; i++){
         if (hours[i].first <= hours[i-1].second){
             count++;
